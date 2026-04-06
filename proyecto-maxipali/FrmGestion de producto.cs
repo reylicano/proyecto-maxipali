@@ -24,12 +24,27 @@ namespace proyecto_maxipali
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            MessageBox.Show("producto maxi pali seleccionado");
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Form1 ventanaNuevo = new Form1();
+            ventanaNuevo.ShowDialog();
+
 
         }
 
-        private void FrmGestion_de_producto_Load(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
+
+
+
+
+
+
+
