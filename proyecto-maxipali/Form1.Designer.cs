@@ -31,10 +31,8 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.lblPrecioCompra = new System.Windows.Forms.Label();
             this.boxCategoria = new System.Windows.Forms.ComboBox();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.numPrecioCompra = new System.Windows.Forms.NumericUpDown();
             this.numPrecioVenta = new System.Windows.Forms.NumericUpDown();
             this.lblPrecioVenta = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
@@ -48,7 +46,7 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecioCompra)).BeginInit();
+            this.btnabrirCategoria = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStokMinimo)).BeginInit();
@@ -83,15 +81,6 @@
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Descripcion";
             // 
-            // lblPrecioCompra
-            // 
-            this.lblPrecioCompra.AutoSize = true;
-            this.lblPrecioCompra.Location = new System.Drawing.Point(164, 115);
-            this.lblPrecioCompra.Name = "lblPrecioCompra";
-            this.lblPrecioCompra.Size = new System.Drawing.Size(132, 20);
-            this.lblPrecioCompra.TabIndex = 3;
-            this.lblPrecioCompra.Text = "Precio de compra";
-            // 
             // boxCategoria
             // 
             this.boxCategoria.FormattingEnabled = true;
@@ -118,16 +107,9 @@
             this.lblCategoria.TabIndex = 5;
             this.lblCategoria.Text = "Categoria";
             // 
-            // numPrecioCompra
-            // 
-            this.numPrecioCompra.Location = new System.Drawing.Point(168, 160);
-            this.numPrecioCompra.Name = "numPrecioCompra";
-            this.numPrecioCompra.Size = new System.Drawing.Size(120, 26);
-            this.numPrecioCompra.TabIndex = 6;
-            // 
             // numPrecioVenta
             // 
-            this.numPrecioVenta.Location = new System.Drawing.Point(335, 162);
+            this.numPrecioVenta.Location = new System.Drawing.Point(314, 163);
             this.numPrecioVenta.Name = "numPrecioVenta";
             this.numPrecioVenta.Size = new System.Drawing.Size(120, 26);
             this.numPrecioVenta.TabIndex = 7;
@@ -135,7 +117,7 @@
             // lblPrecioVenta
             // 
             this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(353, 115);
+            this.lblPrecioVenta.Location = new System.Drawing.Point(316, 114);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
             this.lblPrecioVenta.Size = new System.Drawing.Size(118, 20);
             this.lblPrecioVenta.TabIndex = 8;
@@ -252,11 +234,24 @@
             this.txtNombre.Size = new System.Drawing.Size(100, 26);
             this.txtNombre.TabIndex = 21;
             // 
+            // btnabrirCategoria
+            // 
+            this.btnabrirCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnabrirCategoria.ForeColor = System.Drawing.Color.Red;
+            this.btnabrirCategoria.Location = new System.Drawing.Point(159, 144);
+            this.btnabrirCategoria.Name = "btnabrirCategoria";
+            this.btnabrirCategoria.Size = new System.Drawing.Size(86, 60);
+            this.btnabrirCategoria.TabIndex = 22;
+            this.btnabrirCategoria.Text = "+";
+            this.btnabrirCategoria.UseVisualStyleBackColor = true;
+            this.btnabrirCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnabrirCategoria);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtDescripcion);
@@ -270,17 +265,14 @@
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.lblPrecioVenta);
             this.Controls.Add(this.numPrecioVenta);
-            this.Controls.Add(this.numPrecioCompra);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.boxCategoria);
-            this.Controls.Add(this.lblPrecioCompra);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.Name = "Form1";
             this.Text = "Nuevo Producto";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecioCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStokMinimo)).EndInit();
@@ -294,10 +286,8 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.Label lblPrecioCompra;
         private System.Windows.Forms.ComboBox boxCategoria;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.NumericUpDown numPrecioCompra;
         private System.Windows.Forms.NumericUpDown numPrecioVenta;
         private System.Windows.Forms.Label lblPrecioVenta;
         private System.Windows.Forms.Label lblStock;
@@ -311,6 +301,7 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Button btnabrirCategoria;
     }
 }
 

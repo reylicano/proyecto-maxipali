@@ -24,8 +24,16 @@ namespace proyecto_maxipali
             MessageBox.Show("¡Producto actualizado!\nEstado: " + estado, "MaxiPali");
             this.Close();
         }
-        
+
+        private void lblPrecioCompra_Click(object sender, EventArgs e)
+        {
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 

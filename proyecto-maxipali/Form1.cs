@@ -71,5 +71,12 @@ namespace proyecto_maxipali
         {
 
         }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            FrmCategoria ventana = new FrmCategoria();
+            ventana.ShowDialog();
+           
+        }
     }
 }

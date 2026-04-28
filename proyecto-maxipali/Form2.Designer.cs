@@ -41,7 +41,6 @@
             this.lblStock = new System.Windows.Forms.Label();
             this.lblPrecioVenta = new System.Windows.Forms.Label();
             this.numPrecioVenta = new System.Windows.Forms.NumericUpDown();
-            this.numPrecioCompra = new System.Windows.Forms.NumericUpDown();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.boxCategoria = new System.Windows.Forms.ComboBox();
             this.lblPrecioCompra = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numStokMinimo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioVenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecioCompra)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -166,7 +164,7 @@
             // lblPrecioVenta
             // 
             this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(366, 116);
+            this.lblPrecioVenta.Location = new System.Drawing.Point(313, 116);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
             this.lblPrecioVenta.Size = new System.Drawing.Size(118, 20);
             this.lblPrecioVenta.TabIndex = 30;
@@ -174,17 +172,10 @@
             // 
             // numPrecioVenta
             // 
-            this.numPrecioVenta.Location = new System.Drawing.Point(348, 163);
+            this.numPrecioVenta.Location = new System.Drawing.Point(311, 161);
             this.numPrecioVenta.Name = "numPrecioVenta";
             this.numPrecioVenta.Size = new System.Drawing.Size(120, 26);
             this.numPrecioVenta.TabIndex = 29;
-            // 
-            // numPrecioCompra
-            // 
-            this.numPrecioCompra.Location = new System.Drawing.Point(181, 161);
-            this.numPrecioCompra.Name = "numPrecioCompra";
-            this.numPrecioCompra.Size = new System.Drawing.Size(120, 26);
-            this.numPrecioCompra.TabIndex = 28;
             // 
             // lblCategoria
             // 
@@ -214,11 +205,11 @@
             // lblPrecioCompra
             // 
             this.lblPrecioCompra.AutoSize = true;
-            this.lblPrecioCompra.Location = new System.Drawing.Point(177, 116);
+            this.lblPrecioCompra.Location = new System.Drawing.Point(188, 116);
             this.lblPrecioCompra.Name = "lblPrecioCompra";
-            this.lblPrecioCompra.Size = new System.Drawing.Size(132, 20);
+            this.lblPrecioCompra.Size = new System.Drawing.Size(0, 20);
             this.lblPrecioCompra.TabIndex = 25;
-            this.lblPrecioCompra.Text = "Precio de compra";
+            this.lblPrecioCompra.Click += new System.EventHandler(this.lblPrecioCompra_Click);
             // 
             // lblDescripcion
             // 
@@ -276,7 +267,6 @@
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.lblPrecioVenta);
             this.Controls.Add(this.numPrecioVenta);
-            this.Controls.Add(this.numPrecioCompra);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.boxCategoria);
             this.Controls.Add(this.lblPrecioCompra);
@@ -285,10 +275,10 @@
             this.Controls.Add(this.lblCodigo);
             this.Name = "Form2";
             this.Text = "Editar Producto";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numStokMinimo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecioVenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecioCompra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,7 +299,6 @@
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblPrecioVenta;
         private System.Windows.Forms.NumericUpDown numPrecioVenta;
-        private System.Windows.Forms.NumericUpDown numPrecioCompra;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.ComboBox boxCategoria;
         private System.Windows.Forms.Label lblPrecioCompra;
